@@ -51,7 +51,7 @@
 }*/
 
 .header-list .link.current {
-  color: var(--link-hover);
+  color: var(--accent-color);
 }
 .current {
   position: relative;
@@ -64,7 +64,7 @@
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  background-color: var(--link-hover);
+  background-color: var(--accent-color);
 }
 
 .header-list .link {
@@ -74,7 +74,7 @@
 .header-list .link:hover,
 .header-contacts .link:focus,
 .header-contacts .link:hover {
-  color: var(--link-hover);
+  color: var(--accent-color);
 }
 .header-contacts .link {
   display: flex;

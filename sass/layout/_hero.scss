@@ -32,32 +32,11 @@
 }
 
 .hero-btn {
-  padding: 10px 32px;
-  display: block;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   margin: 0 auto;
-  min-width: 200px;
-  height: 50px;
-  color: rgba(255, 255, 255, 1);
-  background-color: var(--btn-background);
-
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  cursor: pointer;
-
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: 1px solid transparent;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-btn:hover,
 .hero-btn:focus {
-  color: var(--btn-fokus-text);
-  background-color: rgba(24, 140, 232, 1);
+  background-color: var(--btn-hover-background);
 }

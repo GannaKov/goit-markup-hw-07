@@ -21,7 +21,7 @@
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-  letter-spacing: 0.03em;
+
   margin-bottom: 50px;
 }
 .team-img {
@@ -34,7 +34,7 @@
   line-height: 1.19;
   /* identical to box height */
   text-align: center;
-  letter-spacing: 0.03em;
+
   margin-bottom: 10px;
 }
 .team-text {
@@ -45,7 +45,6 @@
   /* identical to box height */
 
   text-align: center;
-  letter-spacing: 0.03em;
 }
 .team-soc-block {
   display: block;
@@ -84,5 +83,5 @@
 .team-soc-link:hover,
 .team-soc-link:focus {
   color: rgba(255, 255, 255, 1);
-  background-color: var(--link-hover);
+  background-color: var(--accent-color);
 }

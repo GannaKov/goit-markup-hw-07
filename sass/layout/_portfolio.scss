@@ -23,8 +23,7 @@
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
-  letter-spacing: 0.03em;
-  cursor: pointer;
+
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -33,13 +32,13 @@
   margin-right: 8px;
 }
 .filter-first-btn {
-  color: var(--btn-fokus-text);
+  color: var(--btn-text);
 
   background-color: var(--btn-background);
 }
 .exaples-filter-btn:hover,
 .exaples-filter-btn:focus {
-  color: var(--btn-fokus-text);
+  color: var(--btn-text);
   background-color: var(--btn-background);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08),
     0 3px 1px 0 rgba(0, 0, 0, 0.1);
@@ -63,14 +62,13 @@
   margin: 15px;
   /*flex-basis: calc((100%-60px) / 3);*/
   flex-basis: calc(100% / 3 - 30px);
-  /*border: 1px solid #eeeeee;*/
 }
 
 .examples-link {
   display: block;
   width: 100%;
   height: 100%;
-  border: 1px solid #eeeeee;
+  border: 1px solid rgba(238, 238, 238, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .examples-wrap {
@@ -113,7 +111,6 @@
   color: var(--paragraph-text);
   font-size: 16px;
   line-height: 1.88;
-  letter-spacing: 0.03em;
 }
 .examples-link:hover,
 .examples-link:focus {

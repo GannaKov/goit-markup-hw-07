@@ -32,7 +32,7 @@
   color: rgba(255, 255, 255, 1);
   font-style: normal;
   line-height: 1.71;
-  letter-spacing: 0.03em;
+
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -41,7 +41,7 @@
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
   line-height: 1.71;
-  letter-spacing: 0.03em;
+
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-adress:hover,
@@ -50,7 +50,7 @@
 .footer-email:focus,
 .footer-tel:hover,
 .footer-tel:focus {
-  color: var(--link-hover);
+  color: var(--accent-color);
 }
 
 /* --- Footer soc links ---- */
@@ -64,9 +64,9 @@
   color: rgba(255, 255, 255, 1);
 
   font-weight: 700;
-  font-size: 14px;
+
   line-height: 1.14;
-  letter-spacing: 0.03em;
+
   text-transform: uppercase;
 }
 .footer-soc-list {
@@ -91,7 +91,7 @@
   height: 100%;
   align-items: center;
   justify-content: center;
-  color: var(--btn-fokus-text);
+  color: var(--btn-text);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -100,7 +100,7 @@
 }
 .footer-soc-link:hover,
 .footer-soc-link:focus {
-  background-color: var(--link-hover);
+  background-color: var(--accent-color);
 }
 .footer-block-mailing {
   /*outline: 1px solid green;*/
@@ -112,9 +112,9 @@
   font-weight: 700;
 
   line-height: 1.14;
-  letter-spacing: 0.03em;
+
   text-transform: uppercase;
-  color: var(--btn-fokus-text);
+  color: var(--btn-text);
 }
 .footer-mailing-field {
   display: flex;
@@ -128,7 +128,7 @@
   background-color: transparent;
   font-size: 16px;
   line-height: 1.25;
-  letter-spacing: 0.03em;
+
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
@@ -144,29 +144,11 @@
 .footer-mailing-imput::placeholder {
   font-size: 16px;
   line-height: 1.25;
-  letter-spacing: 0.03em;
 
   color: rgba(255, 255, 255, 0.6);
 }
 .footer-mailing-btn {
-  display: flex;
-  padding-left: 29px;
-  padding-right: 28px;
-  width: 200px;
-  height: 50px;
-  align-items: center;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  /* identical to box height, or 188% */
-
-  letter-spacing: 0.06em;
-  background-color: var(--btn-background);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
   outline: 1px solid transparent;
-  border: 1px solid transparent;
-  color: var(--btn-fokus-text);
 }
 .icon-send {
   margin-left: 10px;

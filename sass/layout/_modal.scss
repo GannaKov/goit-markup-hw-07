@@ -39,7 +39,7 @@
 }
 .modal-close-btn:focus,
 .modal-close-btn:hover {
-  fill: rgba(33, 150, 243, 1);
+  fill: var(--accent-color);
 }
 .is-hidden {
   opacity: 0;
@@ -60,9 +60,8 @@
   font-size: 20px;
   line-height: 1.05;
   text-align: center;
-  letter-spacing: 0.03em;
 
-  color: #212121;
+  color: var(--title-color);
 }
 .modal-input {
   padding-left: 42px;
@@ -75,22 +74,21 @@
 }
 .modal-input:focus,
 .comment-area:focus {
-  border-color: rgba(33, 150, 243, 1);
+  border-color: var(--accent-color);
   outline: transparent;
 }
 .modal-input:focus + .modal-icon {
-  fill: rgba(33, 150, 243, 1);
+  fill: var(--accent-color);
 }
 .modal-label {
   margin-bottom: 4px;
-  font-family: "Roboto";
-  font-style: normal;
+
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
 
-  color: #757575;
+  color: rgba(117, 117, 117, 1);
 }
 .input-wrap {
   position: relative;
@@ -129,12 +127,11 @@
 }
 .privacy-text {
   line-height: 1.71;
-  letter-spacing: 0.03em;
 
   color: #757575;
 }
 .privacy-link {
-  color: var(--link-hover);
+  color: var(--accent-color);
 }
 /* Кастомный чекбокс */
 .privacy-text {
@@ -155,44 +152,27 @@
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .privacy-check:focus + .privacy-text > .input-check {
-  border-color: rgba(33, 150, 243, 1);
+  border-color: var(--accent-color);
 }
 .check-icon {
   fill: transparent;
 }
 
 .privacy-check:checked + .privacy-text span {
-  background-color: rgba(33, 150, 243, 1);
+  background-color: var(--accent-color);
   border: none;
 }
 .privacy-check:checked + .privacy-text .check-icon {
-  fill: var(--btn-fokus-text);
+  fill: var(--btn-text);
 }
 /* ---------------------*/
 .modal-submit-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-
-  width: 200px;
-  height: 50px;
-
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-
-  letter-spacing: 0.06em;
-
-  color: rgba(255, 255, 255, 1);
-  background-color: var(--btn-background);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: 1px solid transparent;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  margin: 0 auto;
 }
 .modal-submit-btn:focus,
 .modal-submit-btn:hover {
-  background-color: rgba(24, 140, 232, 1);
+  background-color: var(--btn-hover-background);
   outline: transparent;
 }
