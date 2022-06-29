@@ -1,75 +1,9 @@
-:root {
-  --link-hover: rgba(33, 150, 243, 1);
-  --btn-fokus-text: rgba(255, 255, 255, 1);
-  --logo-accent: rgba(33, 150, 243, 1);
-  --hero-footer-color: rgba(47, 48, 58, 1);
-  --sec-title-color: rgba(33, 33, 33, 1);
-  --paragraph-text: rgba(117, 117, 117, 1);
-  --btn-background: rgba(33, 150, 243, 1);
-  --title-color: rgba(33, 33, 33, 1);
-}
-/*------- Reset and so on -----------*/
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
-ul {
-  margin: 0;
-  padding-left: 0;
-}
-
-button {
-  cursor: pointer;
-}
-.link {
-  text-decoration: none;
-}
-.list {
-  list-style: none;
-}
-img {
-  display: block;
-  max-width: 100%;
-}
-
-body {
-  background-color: rgba(255, 255, 255, 1);
-
-  font-size: 14px;
-  font-family: "Roboto", "Verdana", "Tahoma", sans-serif;
-}
-/*скрывается заголовок*/
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
-}
-
-/*-------------------------------*/
-/*------------ header -----------*/
-.container {
-  width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
-  /*outline: 1px dashed tomato;*/
-}
-.section {
-  padding: 94px 0;
-}
-
+@import "./base/reset";
+@import "./utils/vars";
+@import "./utils/hidden";
+@import "./components/container";
+@import "./components/section";
+@import "./components/body";
 .page-header {
   /*padding: 24px 0 25px;*/
   border-bottom: 1px solid rgba(236, 236, 236, 1);
@@ -305,15 +239,12 @@ body {
   display: flex;
   margin: -15px;
 }
-.dealing-link {
-}
 .dealing-item {
   flex-basis: calc((100% - 3 * 30px) / 3);
   margin: 15px;
   /* outline: 1px dashed green;*/
   position: relative;
 }
-
 .dealing-overlay {
   position: absolute;
   display: flex;
@@ -352,7 +283,7 @@ body {
 }
 .team-item {
   background-color: rgba(255, 255, 255, 1);
-  flex-basis: calc((100% -3 * 30px) / 4);
+  flex-basis: calc((100% - 3 * 30px) / 4);
   padding-bottom: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -453,7 +384,7 @@ body {
 }
 .clients-item {
   display: flex;
-  flex-basis: calc((100% -6 * 30px) / 6);
+  flex-basis: calc((100% - 6 * 30px) / 6);
   margin: 0 15px;
   background-color: rgba(255, 255, 255, 1);
 }
