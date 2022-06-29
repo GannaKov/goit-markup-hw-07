@@ -72,6 +72,15 @@ body {
   font-family: "Roboto", "Verdana", "Tahoma", sans-serif;
 }
 
+.logo {
+  font-family: "Raleway", "Verdana", "Tahoma", sans-serif;
+  color: var(--logo-accent);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
 .page-header {
   /*padding: 24px 0 25px;*/
   border-bottom: 1px solid rgb(236, 236, 236);
@@ -93,15 +102,6 @@ body {
 
 .header-contacts {
   display: block;
-}
-
-.logo {
-  font-family: "Raleway", "Verdana", "Tahoma", sans-serif;
-  color: var(--logo-accent);
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
 }
 
 .page-header .logo {
@@ -203,7 +203,6 @@ body {
   color: rgb(117, 117, 117);
 }
 
-/* ------- HERO 235px------*/
 .hero {
   background-color: rgb(196, 196, 196);
   padding: 200px 0;
@@ -257,7 +256,6 @@ body {
   background-color: rgb(24, 140, 232);
 }
 
-/* ----- Блок Особенности -----*/
 /*.qualities-item:not(:last-child) {
   margin-right: 30px;
 }*/
@@ -300,7 +298,6 @@ body {
   letter-spacing: 0.03em;
 }
 
-/* --- Блок Чем мы занимаемся--- */
 .dealing {
   padding-top: 0;
 }
@@ -346,7 +343,6 @@ body {
   color: var(--title-color);
 }
 
-/* -------Блок Наша команда-------*/
 .team {
   background-color: rgb(245, 244, 250);
 }
@@ -442,7 +438,6 @@ body {
   background-color: var(--link-hover);
 }
 
-/* ------- Clients -------- */
 .clients-title {
   margin-bottom: 50px;
   font-weight: 700;
@@ -493,7 +488,6 @@ body {
   border-color: var(--link-hover);
 }
 
-/* ------- Footer -------- */
 .page-footer {
   background-color: var(--hero-footer-color);
   margin: 0 auto;
@@ -677,7 +671,6 @@ body {
   margin-left: 10px;
 }
 
-/* ----- Portfolio ------ */
 .exaples-filter-btn {
   display: inline-block;
   padding: 6px 22px;
@@ -788,7 +781,6 @@ body {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-/*----- Модальное окно -----*/
 .backdrop {
   position: fixed;
   padding: 40px;

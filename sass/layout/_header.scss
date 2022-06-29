@@ -1,0 +1,110 @@
+.page-header {
+  /*padding: 24px 0 25px;*/
+  border-bottom: 1px solid rgba(236, 236, 236, 1);
+}
+.page-header .container {
+  display: flex;
+  align-items: center;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+.header-nav .link {
+  display: block;
+}
+.header-contacts {
+  display: block;
+}
+
+.page-header .logo {
+  margin-right: 93px;
+  padding: 24px 0 25px;
+}
+
+.logo-accent {
+  color: rgba(33, 33, 33, 1);
+}
+.header-list-item .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: rgba(33, 33, 33, 1);
+}
+.header-list {
+  display: flex;
+  align-items: center;
+  color: rgba(33, 33, 33, 1);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.header-list-item:not(:last-child) {
+  margin-right: 50px;
+}
+/*.header-list.link {
+  color: rgba(33, 33, 33, 1);
+}*/
+
+/*.header-list .link:visited {
+  color: rgba(33, 33, 33, 1);
+}*/
+
+.header-list .link.current {
+  color: var(--link-hover);
+}
+.current {
+  position: relative;
+}
+.current::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--link-hover);
+}
+
+.header-list .link {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-list .link:focus,
+.header-list .link:hover,
+.header-contacts .link:focus,
+.header-contacts .link:hover {
+  color: var(--link-hover);
+}
+.header-contacts .link {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  align-items: center;
+  color: rgba(117, 117, 117, 1);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-contacts {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.icon-envelope,
+.icon-handy {
+  margin-right: 10px;
+  fill: currentColor;
+}
+.header-contacts .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+/* ----в эффективности этого visited я сомневаюсь, 
+но тогда есть вопросы----- */
+
+.header-contacts .link:visited {
+  color: rgba(117, 117, 117, 1);
+}
