@@ -1,5 +1,15 @@
 .header-contacts {
-  display: block;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header-contacts__icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+.header-contacts__item:not(:last-child) {
+  margin-right: 50px;
 }
 .header-contacts .link {
   display: flex;
@@ -11,28 +21,18 @@
   line-height: 1.14;
   letter-spacing: 0.02em;
   transition: var(--transition-color);
+  &:visited {
+    color: rgba(117, 117, 117, 1);
+  }
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
 }
-
-.header-contacts {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-}
-.header-contacts__icon {
-  margin-right: 10px;
-  fill: currentColor;
-}
-.header-contacts .header-contacts__item:not(:last-child) {
-  margin-right: 50px;
-}
-
-/* ----в эффективности этого visited я сомневаюсь, 
-но тогда есть вопросы----- */
-
-.header-contacts .link:visited {
-  color: rgba(117, 117, 117, 1);
-}
-.header-contacts .link:focus,
-.header-contacts .link:hover {
-  color: var(--accent-color);
-}
+/*.header-contacts .link:visited {
+    color: rgba(117, 117, 117, 1);
+  }
+  .header-contacts .link:focus,
+  .header-contacts .link:hover {
+    color: var(--accent-color);
+  }*/

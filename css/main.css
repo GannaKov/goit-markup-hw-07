@@ -101,10 +101,10 @@ body {
   border: 1px solid transparent;
 }
 
-.current {
+.link-current {
   position: relative;
 }
-.current::after {
+.link-current::after {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -128,7 +128,7 @@ body {
   padding: 24px 0 25px;
 }
 
-.page-header__logo {
+.logo--header-accent {
   color: rgb(33, 33, 33);
 }
 
@@ -144,13 +144,6 @@ body {
   margin-right: 50px;
 }
 
-.header-nav__item .link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  color: rgb(33, 33, 33);
-}
-
 .header-nav__list {
   display: flex;
   align-items: center;
@@ -159,31 +152,25 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.header-nav__list .current {
+
+.header-nav__item .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: rgb(33, 33, 33);
+}
+
+.header-nav__list .link-current {
   color: var(--accent-color);
 }
+
 .header-nav__list .link {
   transition: var(--transition-color);
 }
+
 .header-nav__list .link:focus,
 .header-nav__list .link:hover {
   color: var(--accent-color);
-}
-
-.header-contacts {
-  display: block;
-}
-
-.header-contacts .link {
-  display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  align-items: center;
-  color: rgb(117, 117, 117);
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  transition: var(--transition-color);
 }
 
 .header-contacts {
@@ -197,21 +184,35 @@ body {
   fill: currentColor;
 }
 
-.header-contacts .header-contacts__item:not(:last-child) {
+.header-contacts__item:not(:last-child) {
   margin-right: 50px;
 }
 
-/* ----в эффективности этого visited я сомневаюсь, 
-но тогда есть вопросы----- */
+.header-contacts .link {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  align-items: center;
+  color: rgb(117, 117, 117);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  transition: var(--transition-color);
+}
 .header-contacts .link:visited {
   color: rgb(117, 117, 117);
 }
-
-.header-contacts .link:focus,
-.header-contacts .link:hover {
+.header-contacts .link:focus, .header-contacts .link:hover {
   color: var(--accent-color);
 }
 
+/*.header-contacts .link:visited {
+    color: rgba(117, 117, 117, 1);
+  }
+  .header-contacts .link:focus,
+  .header-contacts .link:hover {
+    color: var(--accent-color);
+  }*/
 .hero {
   background-color: rgb(196, 196, 196);
   padding: 200px 0;
