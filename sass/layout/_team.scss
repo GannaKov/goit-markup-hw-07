@@ -1,86 +1,49 @@
 .team {
   background-color: rgba(245, 244, 250, 1);
+
+  &__title {
+    color: var(--title-color);
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+
+    margin-bottom: 50px;
+  }
 }
 .team-list {
   display: flex;
-}
-.team-item {
-  background-color: rgba(255, 255, 255, 1);
-  flex-basis: calc((100% - 3 * 30px) / 4);
-  padding-bottom: 30px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
-.team-item:not(:last-child) {
-  margin-right: 30px;
-}
+  &__item {
+    background-color: rgba(255, 255, 255, 1);
+    flex-basis: calc((100% - 3 * 30px) / 4);
+    padding-bottom: 30px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
 
-.team-title {
-  color: var(--title-color);
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
+  &__img {
+    margin-bottom: 30px;
+  }
+  &__title {
+    color: var(--sec-title-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    /* identical to box height */
+    text-align: center;
 
-  margin-bottom: 50px;
-}
-.team-img {
-  margin-bottom: 30px;
-}
-.team-sec-title {
-  color: var(--sec-title-color);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-  /* identical to box height */
-  text-align: center;
+    margin-bottom: 10px;
+  }
+  &__text {
+    color: var(--paragraph-text);
+    font-size: 16px;
+    line-height: 1.19;
+    margin-bottom: 16px;
+    /* identical to box height */
 
-  margin-bottom: 10px;
-}
-.team-text {
-  color: var(--paragraph-text);
-  font-size: 16px;
-  line-height: 1.19;
-  margin-bottom: 16px;
-  /* identical to box height */
-
-  text-align: center;
-}
-.team-soc-block {
-  display: block;
-  padding: 0 32px;
-}
-.team-soc-list {
-  display: flex;
-}
-
-.team-soc-item {
-  margin-right: 10px;
-  width: 44px;
-  height: 44px;
-}
-
-.team-soc-item:last-child {
-  margin-right: 0;
-}
-
-.team-soc-link {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 1);
-  color: rgba(175, 177, 184, 1);
-  transition: var(--transition-color), var(--transition-background-color);
-}
-.team-icon {
-  fill: currentColor;
-}
-
-.team-soc-link:hover,
-.team-soc-link:focus {
-  color: rgba(255, 255, 255, 1);
-  background-color: var(--accent-color);
+    text-align: center;
+  }
 }
