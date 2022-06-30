@@ -12,12 +12,7 @@
     url(../images/hero-bg.jpg);
 }
 
-.hero-overlay {
-}
-.hero-content {
-  padding: 200px 235px;
-}
-.hero-title {
+.hero__title {
   width: 696px;
   margin: 0 auto 30px;
   text-align: center;
@@ -31,12 +26,13 @@
   color: rgba(255, 255, 255, 1);
 }
 
-.hero-btn {
+.hero__btn {
   transition: var(--transition-background-color);
 
   margin: 0 auto;
-}
-.hero-btn:hover,
-.hero-btn:focus {
-  background-color: var(--btn-hover-background);
+
+  &:hover,
+  &:focus {
+    background-color: var(--btn-hover-background);
+  }
 }

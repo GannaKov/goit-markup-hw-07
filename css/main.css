@@ -101,72 +101,9 @@ body {
   border: 1px solid transparent;
 }
 
-.page-header {
-  /*padding: 24px 0 25px;*/
-  border-bottom: 1px solid rgb(236, 236, 236);
-}
-
-.page-header .container {
-  display: flex;
-  align-items: center;
-}
-
-.header-nav {
-  display: flex;
-  align-items: center;
-}
-
-.header-nav .link {
-  display: block;
-}
-
-.header-contacts {
-  display: block;
-}
-
-.page-header .logo {
-  margin-right: 93px;
-  padding: 24px 0 25px;
-}
-
-.logo-accent {
-  color: rgb(33, 33, 33);
-}
-
-.header-list-item .link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  color: rgb(33, 33, 33);
-}
-
-.header-list {
-  display: flex;
-  align-items: center;
-  color: rgb(33, 33, 33);
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
-
-.header-list-item:not(:last-child) {
-  margin-right: 50px;
-}
-
-/*.header-list.link {
-  color: rgba(33, 33, 33, 1);
-}*/
-/*.header-list .link:visited {
-  color: rgba(33, 33, 33, 1);
-}*/
-.header-list .link.current {
-  color: var(--accent-color);
-}
-
 .current {
   position: relative;
 }
-
 .current::after {
   content: "";
   position: absolute;
@@ -178,15 +115,63 @@ body {
   background-color: var(--accent-color);
 }
 
-.header-list .link {
-  transition: var(--transition-color);
+.page-header {
+  /*padding: 24px 0 25px;*/
+  border-bottom: 1px solid rgb(236, 236, 236);
+}
+.page-header .container {
+  display: flex;
+  align-items: center;
+}
+.page-header .logo {
+  margin-right: 93px;
+  padding: 24px 0 25px;
 }
 
-.header-list .link:focus,
-.header-list .link:hover,
-.header-contacts .link:focus,
-.header-contacts .link:hover {
+.page-header__logo {
+  color: rgb(33, 33, 33);
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+.header-nav .link {
+  display: block;
+}
+
+.header-nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header-nav__item .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: rgb(33, 33, 33);
+}
+
+.header-nav__list {
+  display: flex;
+  align-items: center;
+  color: rgb(33, 33, 33);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.header-nav__list .current {
   color: var(--accent-color);
+}
+.header-nav__list .link {
+  transition: var(--transition-color);
+}
+.header-nav__list .link:focus,
+.header-nav__list .link:hover {
+  color: var(--accent-color);
+}
+
+.header-contacts {
+  display: block;
 }
 
 .header-contacts .link {
@@ -207,13 +192,12 @@ body {
   margin-left: auto;
 }
 
-.icon-envelope,
-.icon-handy {
+.header-contacts__icon {
   margin-right: 10px;
   fill: currentColor;
 }
 
-.header-contacts .item:not(:last-child) {
+.header-contacts .header-contacts__item:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -221,6 +205,11 @@ body {
 но тогда есть вопросы----- */
 .header-contacts .link:visited {
   color: rgb(117, 117, 117);
+}
+
+.header-contacts .link:focus,
+.header-contacts .link:hover {
+  color: var(--accent-color);
 }
 
 .hero {
@@ -232,11 +221,7 @@ body {
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpg);
 }
 
-.hero-content {
-  padding: 200px 235px;
-}
-
-.hero-title {
+.hero__title {
   width: 696px;
   margin: 0 auto 30px;
   text-align: center;
@@ -248,13 +233,11 @@ body {
   color: rgb(255, 255, 255);
 }
 
-.hero-btn {
+.hero__btn {
   transition: var(--transition-background-color);
   margin: 0 auto;
 }
-
-.hero-btn:hover,
-.hero-btn:focus {
+.hero__btn:hover, .hero__btn:focus {
   background-color: var(--btn-hover-background);
 }
 
@@ -266,15 +249,13 @@ body {
   /*margin: -15px;*/
   column-gap: 30px;
 }
-
-.qualities-item {
+.qualities-list__item {
   /*outline: 1px dashed green;*/
   /*width: calc((100% - 4 * 30px) / 4);
   margin: 15px;*/
   flex-basis: calc((100% - 90px) / 4);
 }
-
-.qualities-icon {
+.qualities-list__icon {
   display: flex;
   width: 100%;
   height: 120px;
@@ -285,15 +266,13 @@ body {
   /*padding: 25px 100px;*/
   align-items: center;
 }
-
-.qualities-sec-title {
+.qualities-list__title {
   color: var(--sec-title-color);
   line-height: 1.14;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-
-.qualities-text {
+.qualities-list__text {
   color: var(--paragraph-text);
   line-height: 1.71;
 }
