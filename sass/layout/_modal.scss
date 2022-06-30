@@ -70,7 +70,7 @@
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-border-color);
 }
 .modal-input:focus,
 .comment-area:focus {
@@ -104,7 +104,7 @@
 }
 .comment-area {
   resize: none;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-border-color);
 }
 .comment-area {
   padding: 12px 16px;
@@ -149,7 +149,7 @@
   height: 15px;
   border-radius: 2px;
   border: 2px solid rgba(33, 33, 33, 1);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-border-color);
 }
 .privacy-check:focus + .privacy-text > .input-check {
   border-color: var(--accent-color);
@@ -167,7 +167,7 @@
 }
 /* ---------------------*/
 .modal-submit-btn {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-background-color);
 
   margin: 0 auto;
 }

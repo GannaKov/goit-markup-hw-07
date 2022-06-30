@@ -40,6 +40,9 @@ img {
   --btn-hover-background: rgba(24, 140, 232, 1);
   --btn-text: rgba(255, 255, 255, 1);
   --btn-background: rgba(33, 150, 243, 1);
+  --transition-color: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -176,7 +179,7 @@ body {
 }
 
 .header-list .link {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-color);
 }
 
 .header-list .link:focus,
@@ -195,7 +198,7 @@ body {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-color);
 }
 
 .header-contacts {
@@ -246,7 +249,7 @@ body {
 }
 
 .hero-btn {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-background-color);
   margin: 0 auto;
 }
 
@@ -416,7 +419,7 @@ body {
   border-radius: 50%;
   background-color: rgb(255, 255, 255);
   color: rgb(175, 177, 184);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-color), var(--transition-background-color);
 }
 
 .team-icon {
@@ -464,7 +467,7 @@ body {
   border-radius: 4px;
   border: 1px solid #afb1b8;
   outline: transparent;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-color), var(--transition-border-color);
 }
 
 .clients-icon {
@@ -516,7 +519,7 @@ body {
   color: rgb(255, 255, 255);
   font-style: normal;
   line-height: 1.71;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-color);
 }
 
 .footer-email,
@@ -524,7 +527,7 @@ body {
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
   line-height: 1.71;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-color);
 }
 
 .footer-adress:hover,
@@ -573,7 +576,7 @@ body {
   align-items: center;
   justify-content: center;
   color: var(--btn-text);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-background-color);
 }
 
 .footer-icon {
@@ -616,7 +619,7 @@ body {
   border-radius: 4px;
   color: rgba(255, 255, 255, 0.6);
   outline: transparent;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-border-color);
 }
 
 .footer-mailing-imput:focus {
@@ -651,7 +654,7 @@ body {
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-color), var(--transition-background-color), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filtr-btn:not(:last-child) {
@@ -820,7 +823,7 @@ body {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-border-color);
 }
 
 .modal-input:focus,
@@ -857,7 +860,7 @@ body {
 
 .comment-area {
   resize: none;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-border-color);
 }
 
 .comment-area {
@@ -906,7 +909,7 @@ body {
   height: 15px;
   border-radius: 2px;
   border: 2px solid rgb(33, 33, 33);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-border-color);
 }
 
 .privacy-check:focus + .privacy-text > .input-check {
@@ -928,7 +931,7 @@ body {
 
 /* ---------------------*/
 .modal-submit-btn {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-background-color);
   margin: 0 auto;
 }
 

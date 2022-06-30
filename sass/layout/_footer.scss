@@ -33,16 +33,15 @@
   font-style: normal;
   line-height: 1.71;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-color);
 }
-
 .footer-email,
 .footer-tel {
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
   line-height: 1.71;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-color);
 }
 .footer-adress:hover,
 .footer-adress:focus,
@@ -92,7 +91,7 @@
   align-items: center;
   justify-content: center;
   color: var(--btn-text);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-background-color);
 }
 
 .footer-icon {
@@ -134,7 +133,7 @@
   border-radius: 4px;
   color: rgba(255, 255, 255, 0.6);
   outline: transparent;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-border-color);
 }
 .footer-mailing-imput:focus {
   color: rgba(255, 255, 255, 1);
