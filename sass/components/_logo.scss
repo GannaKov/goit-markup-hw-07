@@ -4,4 +4,10 @@
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+  &--header-accent {
+    color: rgba(33, 33, 33, 1);
+  }
+}
+.footer--logo-accent {
+  color: rgba(255, 255, 255, 1);
 }

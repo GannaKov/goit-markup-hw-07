@@ -40,9 +40,11 @@ img {
   --btn-hover-background: rgba(24, 140, 232, 1);
   --btn-text: rgba(255, 255, 255, 1);
   --btn-background: rgba(33, 150, 243, 1);
-  --transition-color: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-color: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 1000ms;
+  --transition-background-color: background-color 250ms
+    cubic-bezier(0.4, 0, 0.2, 1) 1000ms;
+  --transition-border-color: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    1000ms;
 }
 
 body {
@@ -83,6 +85,13 @@ body {
   font-size: 26px;
   line-height: 1.19;
 }
+.logo--header-accent {
+  color: rgb(33, 33, 33);
+}
+
+.footer--logo-accent {
+  color: rgb(255, 255, 255);
+}
 
 .btn {
   display: flex;
@@ -115,6 +124,47 @@ body {
   background-color: var(--accent-color);
 }
 
+.soc-list {
+  display: flex;
+}
+
+.soc-list__item {
+  margin-right: 10px;
+  width: 44px;
+  height: 44px;
+}
+.soc-list__item:last-child {
+  margin-right: 0;
+}
+
+.soc-list__link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--btn-text);
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: var(--transition-background-color);
+}
+.soc-list__link:hover, .soc-list__link:focus {
+  background-color: var(--accent-color);
+}
+
+.soc-list__icon {
+  fill: currentColor;
+}
+
+.soc-list__link--team {
+  background-color: rgb(255, 255, 255);
+  color: rgb(175, 177, 184);
+  transition: var(--transition-color), var(--transition-background-color);
+}
+.soc-list__link--team:hover, .soc-list__link--team:focus {
+  color: rgb(255, 255, 255);
+}
+
 .page-header {
   /*padding: 24px 0 25px;*/
   border-bottom: 1px solid rgb(236, 236, 236);
@@ -123,13 +173,9 @@ body {
   display: flex;
   align-items: center;
 }
-.page-header .logo {
+.page-header .header__logo {
   margin-right: 93px;
   padding: 24px 0 25px;
-}
-
-.logo--header-accent {
-  color: rgb(33, 33, 33);
 }
 
 .header-nav {
@@ -361,6 +407,11 @@ body {
   text-align: center;
 }
 
+.team-soc-block {
+  display: block;
+  padding: 0 32px;
+}
+
 .clients {
   background-color: rgb(255, 255, 255);
 }
@@ -391,6 +442,10 @@ body {
 }
 
 .clients-list__link {
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-property: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 1000ms;
   display: flex;
   height: 92px;
   color: rgb(175, 177, 184);
@@ -400,78 +455,78 @@ body {
   border-radius: 4px;
   border: 1px solid #afb1b8;
   outline: transparent;
-  transition: var(--transition-color), var(--transition-border-color);
+  /* transition: var(--transition-color), var(--transition-border-color);*/
 }
 .clients-list__link:hover, .clients-list__link:focus {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
 
-.page-footer {
+.footer-page {
   background-color: var(--hero-footer-color);
   margin: 0 auto;
   padding: 60px 0;
 }
 
-.footer-blocks {
+.footer-page__blocks {
   display: flex;
   align-items: baseline;
 }
 
-.footer-block-address {
+.footer-block__address {
   margin-right: 70px;
   width: 231px;
   /*padding: 60px 0;*/
   /*outline: 1px solid green;*/
 }
 
-.page-footer .logo {
+.footer-address-block__logo {
   display: block;
   margin-bottom: 20px;
 }
 
-/*.adr {
-  margin-top: 20px;
-}*/
-.footer-contacts-item:not(:last-child) {
+.footer-contacts__item:not(:last-child) {
   margin-bottom: 9px;
 }
 
-.footer-logo-accent {
-  color: rgb(255, 255, 255);
-}
-
-.footer-adress {
+.footer-contacts__adress {
   color: rgb(255, 255, 255);
   font-style: normal;
   line-height: 1.71;
   transition: var(--transition-color);
 }
+.footer-contacts__adress:hover, .footer-contacts__adress:focus {
+  color: var(--accent-color);
+}
 
-.footer-email,
-.footer-tel {
+.footer-contacts__email,
+.footer-contacts__tel {
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
   line-height: 1.71;
   transition: var(--transition-color);
 }
-
-.footer-adress:hover,
-.footer-adress:focus,
-.footer-email:hover,
-.footer-email:focus,
-.footer-tel:hover,
-.footer-tel:focus {
+.footer-contacts__email:hover, .footer-contacts__email:focus,
+.footer-contacts__tel:hover,
+.footer-contacts__tel:focus {
   color: var(--accent-color);
 }
 
-/* --- Footer soc links ---- */
-.footer-block-social {
+/*.footer-contacts__adress:hover,
+.footer-contacts__adress:focus,
+.footer-contacts__email:hover,
+.footer-contacts__email:focus,
+.footer-contacts__tel:hover,
+.footer-contacts__tel:focus {
+  color: var(--accent-color);
+}*/
+/* --- Footer join + soc links ---- */
+.footer-block__social {
   margin-right: auto;
   /* outline: 1px solid green;*/
 }
 
-.footer-block-social-title {
+.block-join__title {
   margin-bottom: 20px;
   color: rgb(255, 255, 255);
   font-weight: 700;
@@ -479,41 +534,7 @@ body {
   text-transform: uppercase;
 }
 
-.footer-soc-list {
-  display: flex;
-}
-
-.footer-soc-item {
-  margin-right: 10px;
-  width: 44px;
-  height: 44px;
-}
-
-.footer-soc-item:last-child {
-  margin-right: 0;
-}
-
-.footer-soc-link {
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
-  display: flex;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  color: var(--btn-text);
-  transition: var(--transition-background-color);
-}
-
-.footer-icon {
-  fill: currentColor;
-}
-
-.footer-soc-link:hover,
-.footer-soc-link:focus {
-  background-color: var(--accent-color);
-}
-
+/* mailing block*/
 .footer-block-mailing {
   /*outline: 1px solid green;*/
   /* width: 570px;*/
@@ -865,42 +886,4 @@ body {
 .modal-submit-btn:hover {
   background-color: var(--btn-hover-background);
   outline: transparent;
-}
-
-.team-soc-block {
-  display: block;
-  padding: 0 32px;
-}
-
-.team-soc {
-  display: flex;
-}
-
-.team-soc__item {
-  margin-right: 10px;
-  width: 44px;
-  height: 44px;
-}
-.team-soc__item:last-child {
-  margin-right: 0;
-}
-
-.team-soc__icon {
-  fill: currentColor;
-}
-
-.team-soc__link {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background-color: rgb(255, 255, 255);
-  color: rgb(175, 177, 184);
-  transition: var(--transition-color), var(--transition-background-color);
-}
-.team-soc__link:hover, .team-soc__link:focus {
-  color: rgb(255, 255, 255);
-  background-color: var(--accent-color);
 }/*# sourceMappingURL=main.css.map */
