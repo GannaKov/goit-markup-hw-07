@@ -1,14 +1,3 @@
-.backdrop {
-  position: fixed;
-  padding: 40px;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity 250ms linear, visibility 500ms linear;
-  /*без этого не работает обратная анимация*/
-}
 .modal {
   position: absolute;
   padding: 40px;
@@ -22,8 +11,12 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 300ms linear;
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -100%) scale(0) rotate(180deg);
+  }
 }
-.modal-close-btn {
+.modal__close-btn {
   position: absolute;
   display: flex;
   width: 30px;
@@ -36,24 +29,23 @@
   border-radius: 50%;
   background-color: transparent;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    fill: var(--accent-color);
+  }
 }
-.modal-close-btn:focus,
-.modal-close-btn:hover {
-  fill: var(--accent-color);
-}
+
 .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -100%) scale(0) rotate(180deg);
-}
+
 .modal-form {
   display: flex;
   flex-direction: column;
 }
-.modal-title {
+.modal-form__title {
   margin-bottom: 12px;
 
   font-weight: 700;
@@ -63,7 +55,8 @@
 
   color: var(--title-color);
 }
-.modal-input {
+
+.modal-form__input {
   padding-left: 42px;
   width: 100%;
   height: 40px;
@@ -71,16 +64,14 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: var(--transition-border-color);
+
+  &:focus {
+    border-color: var(--accent-color);
+    outline: transparent;
+  }
 }
-.modal-input:focus,
-.comment-area:focus {
-  border-color: var(--accent-color);
-  outline: transparent;
-}
-.modal-input:focus + .modal-icon {
-  fill: var(--accent-color);
-}
-.modal-label {
+
+.modal-form__label {
   margin-bottom: 4px;
 
   font-weight: 400;
@@ -90,57 +81,65 @@
 
   color: rgba(117, 117, 117, 1);
 }
-.input-wrap {
+.modal-form__input-wrap {
   position: relative;
   margin-bottom: 10px;
 }
-.modal-icon {
+.modal-form__icon {
   position: absolute;
 
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .modal-form__input:focus + & {
+    fill: var(--accent-color);
+  }
 }
-.comment-area {
-  resize: none;
-  transition: var(--transition-border-color);
-}
-.comment-area {
+.modal-form__comment-area {
   padding: 12px 16px;
   margin-bottom: 20px;
   width: 100%;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  resize: none;
+  transition: var(--transition-border-color);
+
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  &:focus {
+    border-color: var(--accent-color);
+    outline: transparent;
+  }
 }
 
-.comment-area::placeholder {
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-}
-.privacy-field {
+/* Кастомный чекбокс */
+.checkbox__field {
   margin-bottom: 30px;
   text-align: center;
 }
-.privacy-text {
+
+.checkbox__link {
+  color: var(--accent-color);
+}
+
+.checkbox__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   line-height: 1.71;
 
   color: #757575;
 }
-.privacy-link {
-  color: var(--accent-color);
-}
-/* Кастомный чекбокс */
-.privacy-text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.input-check {
+.checkbox__input {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -150,29 +149,34 @@
   border-radius: 2px;
   border: 2px solid rgba(33, 33, 33, 1);
   transition: var(--transition-border-color);
-}
-.privacy-check:focus + .privacy-text > .input-check {
-  border-color: var(--accent-color);
-}
-.check-icon {
-  fill: transparent;
+
+  .checkbox__check:focus + .checkbox__text > & {
+    border-color: var(--accent-color);
+  }
+
+  .checkbox__check:checked + .checkbox__text & {
+    background-color: var(--accent-color);
+    border: none;
+  }
 }
 
-.privacy-check:checked + .privacy-text span {
-  background-color: var(--accent-color);
-  border: none;
+.checkbox__icon {
+  fill: transparent;
+
+  .checkbox__check:checked + .checkbox__text & {
+    fill: var(--btn-text);
+  }
 }
-.privacy-check:checked + .privacy-text .check-icon {
-  fill: var(--btn-text);
-}
+
 /* ---------------------*/
-.modal-submit-btn {
+.modal__submit-btn {
   transition: var(--transition-background-color);
 
   margin: 0 auto;
-}
-.modal-submit-btn:focus,
-.modal-submit-btn:hover {
-  background-color: var(--btn-hover-background);
-  outline: transparent;
+
+  &:focus,
+  &:hover {
+    background-color: var(--btn-hover-background);
+    outline: transparent;
+  }
 }
