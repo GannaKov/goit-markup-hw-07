@@ -27,7 +27,7 @@
   color: var(--accent-color);
 }
 .header-nav__list .link {
-  transition: var(--transition-color);
+  @include transitions(color);
 }
 .header-nav__list .link:focus,
 .header-nav__list .link:hover {

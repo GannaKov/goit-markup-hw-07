@@ -1,16 +1,9 @@
-.examples {
+.examples-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 56px;
 }
-.exaples-title {
-}
-
-.examples-navi {
-}
-.container .examples-navi {
-}
-.exaples-filter {
-}
-
-.exaples-filter-btn {
+.examples-filter__btn {
   display: inline-block;
   padding: 6px 22px;
   height: 38px;
@@ -24,58 +17,55 @@
   line-height: 1.62;
   text-align: center;
 
-  transition: var(--transition-color),
-    var(--transition-background-color),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transitions(color, background-color, box-shadow);
+  &:hover,
+  &:focus {
+    color: var(--btn-text);
+    background-color: var(--btn-background);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08),
+      0 3px 1px 0 rgba(0, 0, 0, 0.1);
+  }
 }
-.filtr-btn:not(:last-child) {
+.examples-filter__item:not(:last-child) {
   margin-right: 8px;
 }
-.filter-first-btn {
+.examples-filter--first-btn {
   color: var(--btn-text);
 
   background-color: var(--btn-background);
 }
-.exaples-filter-btn:hover,
-.exaples-filter-btn:focus {
-  color: var(--btn-text);
-  background-color: var(--btn-background);
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08),
-    0 3px 1px 0 rgba(0, 0, 0, 0.1);
-}
-/* ---- Список карточек ---------*/
-.examles-card {
-}
 
-.examples-navi {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 56px;
-}
+/* ---- Карточки работ ---------*/
 
 .examples-list {
   display: flex;
   flex-wrap: wrap;
   margin: -15px;
 }
-.examples-list-item {
+.examples-list__item {
   margin: 15px;
   /*flex-basis: calc((100%-60px) / 3);*/
   flex-basis: calc(100% / 3 - 30px);
 }
 
-.examples-link {
+.examples-list__link {
   display: block;
   width: 100%;
   height: 100%;
   border: 1px solid rgba(238, 238, 238, 1);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include transitions(box-shadow);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
 }
-.examples-wrap {
+.examples-list__wrap {
   position: relative;
   overflow: hidden;
 }
-.examples-wrap-text {
+.examples-list__wrap-text {
   position: absolute;
   top: 0;
   height: 100%;
@@ -87,19 +77,19 @@
   color: rgba(255, 255, 255, 1);
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(101%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include transitions(transform);
+  .examples-list__link:hover &,
+  .examples-list__link:focus & {
+    transform: translateY(0);
+  }
 }
 
-.examples-link:hover .examples-wrap-text,
-.examples-link:focus .examples-wrap-text {
-  transform: translateY(0);
-}
-
-.examples-content {
+.examples-list__content {
   padding: 20px 24px;
 }
 
-.examples-sec-title {
+.examples-list__title {
   margin-bottom: 4px;
   color: var(--sec-title-color);
   font-size: 18px;
@@ -107,13 +97,8 @@
   letter-spacing: 0.06em;
 }
 
-.examples-text {
+.examples-list__text {
   color: var(--paragraph-text);
   font-size: 16px;
   line-height: 1.88;
-}
-.examples-link:hover,
-.examples-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
 }

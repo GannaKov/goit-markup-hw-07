@@ -27,7 +27,7 @@
 }
 
 .hero__btn {
-  transition: var(--transition-background-color);
+  @include transitions(background-color);
 
   margin: 0 auto;
 

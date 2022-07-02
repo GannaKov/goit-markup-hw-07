@@ -27,7 +27,7 @@
   font-style: normal;
   line-height: 1.71;
 
-  transition: var(--transition-color);
+  @include transitions(color);
   &:hover,
   &:focus {
     color: var(--accent-color);
@@ -39,7 +39,7 @@
   font-style: normal;
   line-height: 1.71;
 
-  transition: var(--transition-color);
+  @include transitions(color);
 
   &:hover,
   &:focus {
@@ -96,8 +96,7 @@
   color: rgba(255, 255, 255, 0.6);
   outline: transparent;
 
-  transition: var(--transition-border-color);
-
+  @include transitions(border-color);
   &:focus {
     color: rgba(255, 255, 255, 1);
 

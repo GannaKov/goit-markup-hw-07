@@ -30,7 +30,7 @@
     <header class="page-header">
       <div class="container">
         <nav class="header-nav list">
-          <a class="logo link" href="./index.html"
+          <a class="logo header__logo link" href="./index.html"
             >Web<span class="logo--header-accent">Studio</span></a
           >
           <ul class="header-nav__list list">
@@ -75,30 +75,32 @@
         <div class="container">
           <!-- Фильр -->
 
-          <h1 class="exaples-title visually-hidden">Примеры работ</h1>
+          <h1 class="examples__title visually-hidden">Примеры работ</h1>
 
-          <!--<div class="exaples-filter"> -->
-          <ul class="list examples-navi">
-            <li class="filtr-btn">
-              <button class="exaples-filter-btn filter-first-btn" type="button">
+          <ul class="list examples-filter">
+            <li class="examples-filter__item">
+              <button
+                class="examples-filter__btn examples-filter--first-btn"
+                type="button"
+              >
                 Все
               </button>
             </li>
-            <li class="filtr-btn">
-              <button class="exaples-filter-btn" type="button">
+            <li class="examples-filter__item">
+              <button class="examples-filter__btn" type="button">
                 Веб-сайты
               </button>
             </li>
-            <li class="filtr-btn">
-              <button class="exaples-filter-btn" type="button">
+            <li class="examples-filter__item">
+              <button class="examples-filter__btn" type="button">
                 Приложения
               </button>
             </li>
-            <li class="filtr-btn">
-              <button class="exaples-filter-btn" type="button">Дизайн</button>
+            <li class="examples-filter__item">
+              <button class="examples-filter__btn" type="button">Дизайн</button>
             </li>
-            <li class="filtr-btn">
-              <button class="exaples-filter-btn" type="button">
+            <li class="examples-filter__item">
+              <button class="examples-filter__btn" type="button">
                 Маркетинг
               </button>
             </li>
@@ -108,11 +110,11 @@
           <!--  Карточки работ  -->
           <!--<div class="examles-card">-->
           <ul class="examples-list list">
-            <li class="examples-list-item">
-              <a class="examples-link link" href="">
-                <div class="examples-wrap">
+            <li class="examples-list__item">
+              <a class="examples-list__link link" href="">
+                <div class="examples-list__wrap">
                   <img src="./images/project1.jpg" alt="" width="370" />
-                  <p class="examples-wrap-text">
+                  <p class="examples-list__wrap-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
                     исчерпывающие сведения о компании или частном лице.
@@ -120,151 +122,153 @@
                 </div>
 
                 <!-- Низ карточки, ниже аналогично -->
-                <div class="examples-content">
-                  <h2 class="examples-sec-title">Технокряк</h2>
-                  <p class="examples-text">Веб-сайт</p>
+                <div class="examples-list__content">
+                  <h2 class="examples-list__title">Технокряк</h2>
+                  <p class="examples-list__text">Веб-сайт</p>
                 </div>
               </a>
             </li>
-            <li class="examples-list-item">
-              <a class="examples-link link" href="">
-                <div class="examples-wrap">
+            <li class="examples-list__item">
+              <a class="examples-list__link link" href="">
+                <div class="examples-list__wrap">
                   <img src="./images/project2.jpg" alt="" width="370" />
-                  <p class="examples-wrap-text">
+                  <p class="examples-list__wrap-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
                     исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
-                <div class="examples-content">
-                  <h2 class="examples-sec-title">
+                <div class="examples-list__content">
+                  <h2 class="examples-list__title">
                     Постер <span lang="en">New Orlean vs Golden Star</span>
                   </h2>
-                  <p class="examples-text">Дизайн</p>
+                  <p class="examples-list__text">Дизайн</p>
                 </div>
               </a>
             </li>
-            <li class="examples-list-item">
-              <a class="examples-link link" href="">
-                <div class="examples-wrap">
+            <li class="examples-list__item">
+              <a class="examples-list__link link" href="">
+                <div class="examples-list__wrap">
                   <img src="./images/project3.jpg" alt="" width="370" />
-                  <p class="examples-wrap-text">
+                  <p class="examples-list__wrap-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
                     исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
-                <div class="examples-content">
-                  <h2 class="examples-sec-title">
+                <div class="examples-list__content">
+                  <h2 class="examples-list__title">
                     Ресторан <span lang="en">Seafood</span>
                   </h2>
-                  <p class="examples-text">Приложение</p>
+                  <p class="examples-list__text">Приложение</p>
                 </div>
               </a>
             </li>
-            <li class="examples-list-item">
-              <a class="examples-link link" href="">
-                <div class="examples-wrap">
+            <li class="examples-list__item">
+              <a class="examples-list__link link" href="">
+                <div class="examples-list__wrap">
                   <img src="./images/project4.jpg" alt="" width="370" />
-                  <p class="examples-wrap-text">
+                  <p class="examples-list__wrap-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
                     исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
-                <div class="examples-content">
-                  <h2 class="examples-sec-title">
+                <div class="examples-list__content">
+                  <h2 class="examples-list__title">
                     Проект <span lang="en">Prime</span>
                   </h2>
-                  <p class="examples-text">Маркетинг</p>
+                  <p class="examples-list__text">Маркетинг</p>
                 </div>
               </a>
             </li>
-            <li class="examples-list-item">
-              <a class="examples-link link" href="">
-                <div class="examples-wrap">
+            <li class="examples-list__item">
+              <a class="examples-list__link link" href="">
+                <div class="examples-list__wrap">
                   <img src="./images/project5.jpg" alt="" width="370" />
-                  <p class="examples-wrap-text">
+                  <p class="examples-list__wrap-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
                     исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
-                <div class="examples-content">
-                  <h2 class="examples-sec-title">
+                <div class="examples-list__content">
+                  <h2 class="examples-list__title">
                     Проект <span lang="en">Boxes</span>
                   </h2>
-                  <p class="examples-text">Приложение</p>
+                  <p class="examples-list__text">Приложение</p>
                 </div>
               </a>
             </li>
-            <li class="examples-list-item">
-              <a class="examples-link link" href="">
-                <div class="examples-wrap">
+            <li class="examples-list__item">
+              <a class="examples-list__link link" href="">
+                <div class="examples-list__wrap">
                   <img src="./images/project6.jpg" alt="" width="370" />
-                  <p class="examples-wrap-text">
+                  <p class="examples-list__wrap-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
                     исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
-                <div class="examples-content">
-                  <h2 class="examples-sec-title" lang="en">
+                <div class="examples-list__content">
+                  <h2 class="examples-list__title" lang="en">
                     Inspiration has no Borders
                   </h2>
-                  <p class="examples-text">Веб-сайт</p>
+                  <p class="examples-list__text">Веб-сайт</p>
                 </div>
               </a>
             </li>
-            <li class="examples-list-item">
-              <a class="examples-link link" href="">
-                <div class="examples-wrap">
+            <li class="examples-list__item">
+              <a class="examples-list__link link" href="">
+                <div class="examples-list__wrap">
                   <img src="./images/project7.jpg" alt="" width="370" />
-                  <p class="examples-wrap-text">
+                  <p class="examples-list__wrap-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
                     исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
-                <div class="examples-content">
-                  <h2 class="examples-sec-title">
+                <div class="examples-list__content">
+                  <h2 class="examples-list__title">
                     Издание <span lang="en">Limited Edition</span>
                   </h2>
-                  <p class="examples-text">Дизайн</p>
+                  <p class="examples-list__text">Дизайн</p>
                 </div>
               </a>
             </li>
-            <li class="examples-list-item">
-              <a class="examples-link link" href="">
-                <div class="examples-wrap">
+            <li class="examples-list__item">
+              <a class="examples-list__link link" href="">
+                <div class="examples-list__wrap">
                   <img src="./images/project8.jpg" alt="" width="370" />
-                  <p class="examples-wrap-text">
+                  <p class="examples-list__wrap-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
                     исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
-                <div class="examples-content">
-                  <h2 class="examples-sec-title">
+                <div class="examples-list__content">
+                  <h2 class="examples-list__title">
                     Проект <span lang="en">LAB</span>
                   </h2>
-                  <p class="examples-text">Маркетинг</p>
+                  <p class="examples-list__text">Маркетинг</p>
                 </div>
               </a>
             </li>
-            <li class="examples-list-item">
-              <a class="examples-link link" href="">
-                <div class="examples-wrap">
+            <li class="examples-list__item">
+              <a class="examples-list__link link" href="">
+                <div class="examples-list__wrap">
                   <img src="./images/project9.jpg" alt="" width="370" />
-                  <p class="examples-wrap-text">
+                  <p class="examples-list__wrap-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
                     исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
-                <div class="examples-content">
-                  <h2 class="examples-sec-title" lang="en">Growing Business</h2>
-                  <p class="examples-text">Приложение</p>
+                <div class="examples-list__content">
+                  <h2 class="examples-list__title" lang="en">
+                    Growing Business
+                  </h2>
+                  <p class="examples-list__text">Приложение</p>
                 </div>
               </a>
             </li>
@@ -273,83 +277,99 @@
       </section>
       <!--  Футер -->
     </main>
-    <footer class="page-footer">
-      <div class="container footer-blocks">
-        <div class="footer-block-address">
-          <a class="link logo" href="./index.html"
-            >Web<span class="footer-logo-accent">Studio</span></a
+    <footer class="footer-page">
+      <div class="container footer-page__blocks">
+        <div class="footer-block__address">
+          <a class="link logo footer-address-block__logo" href="./index.html"
+            >Web<span class="footer--logo-accent">Studio</span></a
           >
-          <address class="adr">
+          <address>
             <ul class="footer-contacts list">
-              <li class="footer-contacts-item">
+              <li class="footer-contacts__item">
                 <a
-                  class="footer-adress link"
+                  class="footer-contacts__adress link"
                   href=" https://goo.gl/maps/PGf1aji3u7h2vcn76"
                   target="_blank"
                   rel="noopener noreferrer"
                   >г. Киев, пр-т Леси Украинки, 26</a
                 >
               </li>
-              <li class="footer-contacts-item">
-                <a class="footer-email link" href="mailto:info@example.com"
+              <li class="footer-contacts__item">
+                <a
+                  class="footer-contacts__email link"
+                  href="mailto:info@example.com"
                   >info@example.com</a
                 >
               </li>
-              <li class="footer-contacts-item">
-                <a class="footer-tel link" href="tel:+380991111111"
+
+              <li class="footer-contacts__item">
+                <a class="footer-contacts__tel link" href="tel:+380991111111"
                   >+38 099 111 11 11</a
                 >
               </li>
             </ul>
           </address>
         </div>
-        <div class="footer-block-social">
-          <p class="footer-block-social-title">Присоединяйтесь</p>
-          <ul class="footer-soc-list list">
-            <li class="footer-soc-item">
-              <a href="" class="footer-soc-link link">
-                <svg class="footer-icon icon-instagram" width="20" height="20">
+        <form class="footer-block__social">
+          <p class="footer-block__title">Присоединяйтесь</p>
+          <ul class="soc-list list">
+            <li class="soc-list__item">
+              <a href="" class="soc-list__link link">
+                <svg
+                  class="soc-list__icon icon-instagram"
+                  width="20"
+                  height="20"
+                >
                   <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-soc-item">
-              <a href="" class="footer-soc-link link">
-                <svg class="footer-icon icon-twitter" width="20" height="20">
+            <li class="soc-list__item">
+              <a href="" class="soc-list__link link">
+                <svg class="soc-list__icon icon-twitter" width="20" height="20">
                   <use href="./images/icons.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
 
-            <li class="footer-soc-item">
-              <a href="" class="footer-soc-link link">
-                <svg class="footer-icon icon-facebook" width="20" height="20">
+            <li class="soc-list__item">
+              <a href="" class="soc-list__link link">
+                <svg
+                  class="soc-list__icon icon-facebook"
+                  width="20"
+                  height="20"
+                >
                   <use href="./images/icons.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-soc-item">
-              <a href="" class="footer-soc-link link">
-                <svg class="footer-icon icon-linkedin" width="20" height="20">
+            <li class="soc-list__item">
+              <a href="" class="soc-list__link link">
+                <svg
+                  class="soc-list__icon icon-linkedin"
+                  width="20"
+                  height="20"
+                >
                   <use href="./images/icons.svg#icon-linkedin"></use>
                 </svg>
               </a>
             </li>
           </ul>
-        </div>
-        <form class="footer-block-mailing">
-          <p class="footer-mailing-text">Подпишитесь на рассылку</p>
-          <div class="footer-mailing-field">
+        </form>
+        <div class="footer-block__mailing">
+          <p class="footer-mailing__text">Подпишитесь на рассылку</p>
+          <div class="footer-mailing__field">
             <input
-              class="footer-mailing-imput"
+              class="footer-mailing__imput"
               type="email"
-              name="email"
+              name="mailing-email"
               placeholder="E-mail"
+              id="mailing-email"
               title="my@mail.com"
             />
-            <button class="footer-mailing-btn btn" type="submit">
+            <button class="btn footer-mailing__btn" type="submit">
               Подписаться<svg
-                class="footer-icon icon-send"
+                class="footer-mailing__icon icon-send"
                 width="24"
                 height="24"
               >
@@ -357,7 +377,7 @@
               </svg>
             </button>
           </div>
-        </form>
+        </div>
       </div>
     </footer>
   </body>

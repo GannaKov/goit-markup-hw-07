@@ -40,18 +40,6 @@ img {
   --btn-hover-background: rgba(24, 140, 232, 1);
   --btn-text: rgba(255, 255, 255, 1);
   --btn-background: rgba(33, 150, 243, 1);
-  --transition-color: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 1000ms;
-  --transition-background-color: background-color 250ms
-    cubic-bezier(0.4, 0, 0.2, 1) 1000ms;
-  --transition-border-color: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
-    1000ms;
-}
-
-body {
-  background-color: rgb(255, 255, 255);
-  letter-spacing: 0.03em;
-  font-size: 14px;
-  font-family: "Roboto", "Verdana", "Tahoma", sans-serif;
 }
 
 .visually-hidden {
@@ -65,6 +53,13 @@ body {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  font-family: "Roboto", "Verdana", "Tahoma", sans-serif;
 }
 
 .container {
@@ -146,7 +141,9 @@ body {
   border-radius: 50%;
   color: var(--btn-text);
   background-color: rgba(255, 255, 255, 0.1);
-  transition: var(--transition-background-color);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .soc-list__link:hover, .soc-list__link:focus {
   background-color: var(--accent-color);
@@ -159,7 +156,9 @@ body {
 .soc-list__link--team {
   background-color: rgb(255, 255, 255);
   color: rgb(175, 177, 184);
-  transition: var(--transition-color), var(--transition-background-color);
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .soc-list__link--team:hover, .soc-list__link--team:focus {
   color: rgb(255, 255, 255);
@@ -223,7 +222,9 @@ body {
 }
 
 .header-nav__list .link {
-  transition: var(--transition-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-nav__list .link:focus,
@@ -255,7 +256,9 @@ body {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  transition: var(--transition-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-contacts .link:visited {
   color: rgb(117, 117, 117);
@@ -293,25 +296,20 @@ body {
 }
 
 .hero__btn {
-  transition: var(--transition-background-color);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   margin: 0 auto;
 }
 .hero__btn:hover, .hero__btn:focus {
   background-color: var(--btn-hover-background);
 }
 
-/*.qualities-item:not(:last-child) {
-  margin-right: 30px;
-}*/
 .qualities-list {
   display: flex;
-  /*margin: -15px;*/
   column-gap: 30px;
 }
 .qualities-list__item {
-  /*outline: 1px dashed green;*/
-  /*width: calc((100% - 4 * 30px) / 4);
-  margin: 15px;*/
   flex-basis: calc((100% - 90px) / 4);
 }
 .qualities-list__icon {
@@ -322,7 +320,6 @@ body {
   background-color: rgb(245, 244, 250);
   border-radius: 4px;
   justify-content: center;
-  /*padding: 25px 100px;*/
   align-items: center;
 }
 .qualities-list__title {
@@ -406,7 +403,6 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  /* identical to box height */
   text-align: center;
   margin-bottom: 10px;
 }
@@ -415,7 +411,6 @@ body {
   font-size: 16px;
   line-height: 1.19;
   margin-bottom: 16px;
-  /* identical to box height */
   text-align: center;
 }
 
@@ -454,10 +449,9 @@ body {
 }
 
 .clients-list__link {
-  transition-property: border-color;
+  transition-property: color, border-color;
   transition-duration: 250ms;
-  transition-property: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 1000ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   height: 92px;
   color: rgb(175, 177, 184);
@@ -505,7 +499,9 @@ body {
   color: rgb(255, 255, 255);
   font-style: normal;
   line-height: 1.71;
-  transition: var(--transition-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-contacts__adress:hover, .footer-contacts__adress:focus {
   color: var(--accent-color);
@@ -516,7 +512,9 @@ body {
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
   line-height: 1.71;
-  transition: var(--transition-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-contacts__email:hover, .footer-contacts__email:focus,
 .footer-contacts__tel:hover,
@@ -564,7 +562,9 @@ body {
   background-color: transparent;
   color: rgba(255, 255, 255, 0.6);
   outline: transparent;
-  transition: var(--transition-border-color);
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-mailing__imput:focus {
   color: rgb(255, 255, 255);
@@ -584,7 +584,13 @@ body {
   margin-left: 10px;
 }
 
-.exaples-filter-btn {
+.examples-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 56px;
+}
+
+.examples-filter__btn {
   display: inline-block;
   padding: 6px 22px;
   height: 38px;
@@ -597,58 +603,57 @@ body {
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
-  transition: var(--transition-color), var(--transition-background-color), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.filtr-btn:not(:last-child) {
-  margin-right: 8px;
-}
-
-.filter-first-btn {
-  color: var(--btn-text);
-  background-color: var(--btn-background);
-}
-
-.exaples-filter-btn:hover,
-.exaples-filter-btn:focus {
+.examples-filter__btn:hover, .examples-filter__btn:focus {
   color: var(--btn-text);
   background-color: var(--btn-background);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 3px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* ---- Список карточек ---------*/
-.examples-navi {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 56px;
+.examples-filter__item:not(:last-child) {
+  margin-right: 8px;
 }
 
+.examples-filter--first-btn {
+  color: var(--btn-text);
+  background-color: var(--btn-background);
+}
+
+/* ---- Карточки работ ---------*/
 .examples-list {
   display: flex;
   flex-wrap: wrap;
   margin: -15px;
 }
 
-.examples-list-item {
+.examples-list__item {
   margin: 15px;
   /*flex-basis: calc((100%-60px) / 3);*/
   flex-basis: calc(33.3333333333% - 30px);
 }
 
-.examples-link {
+.examples-list__link {
   display: block;
   width: 100%;
   height: 100%;
   border: 1px solid rgb(238, 238, 238);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.examples-list__link:hover, .examples-list__link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.examples-wrap {
+.examples-list__wrap {
   position: relative;
   overflow: hidden;
 }
 
-.examples-wrap-text {
+.examples-list__wrap-text {
   position: absolute;
   top: 0;
   height: 100%;
@@ -659,19 +664,19 @@ body {
   color: rgb(255, 255, 255);
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(101%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.examples-link:hover .examples-wrap-text,
-.examples-link:focus .examples-wrap-text {
+.examples-list__link:hover .examples-list__wrap-text, .examples-list__link:focus .examples-list__wrap-text {
   transform: translateY(0);
 }
 
-.examples-content {
+.examples-list__content {
   padding: 20px 24px;
 }
 
-.examples-sec-title {
+.examples-list__title {
   margin-bottom: 4px;
   color: var(--sec-title-color);
   font-size: 18px;
@@ -679,15 +684,10 @@ body {
   letter-spacing: 0.06em;
 }
 
-.examples-text {
+.examples-list__text {
   color: var(--paragraph-text);
   font-size: 16px;
   line-height: 1.88;
-}
-
-.examples-link:hover,
-.examples-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .modal {
@@ -719,7 +719,9 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: transparent;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal__close-btn:focus, .modal__close-btn:hover {
   fill: var(--accent-color);
@@ -751,7 +753,9 @@ body {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  transition: var(--transition-border-color);
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form__input:focus {
   border-color: var(--accent-color);
@@ -777,7 +781,9 @@ body {
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form__input:focus + .modal-form__icon {
   fill: var(--accent-color);
@@ -791,7 +797,9 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
-  transition: var(--transition-border-color);
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form__comment-area::placeholder {
   font-size: 12px;
@@ -831,7 +839,9 @@ body {
   height: 15px;
   border-radius: 2px;
   border: 2px solid rgb(33, 33, 33);
-  transition: var(--transition-border-color);
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .checkbox__check:focus + .checkbox__text > .checkbox__input {
   border-color: var(--accent-color);
@@ -850,7 +860,9 @@ body {
 
 /* ---------------------*/
 .modal__submit-btn {
-  transition: var(--transition-background-color);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   margin: 0 auto;
 }
 .modal__submit-btn:focus, .modal__submit-btn:hover {

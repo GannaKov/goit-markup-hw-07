@@ -28,7 +28,7 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: transparent;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transitions(fill);
   &:focus,
   &:hover {
     fill: var(--accent-color);
@@ -63,7 +63,7 @@
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  transition: var(--transition-border-color);
+  @include transitions(border-color);
 
   &:focus {
     border-color: var(--accent-color);
@@ -91,7 +91,7 @@
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transitions(fill);
 
   .modal-form__input:focus + & {
     fill: var(--accent-color);
@@ -105,7 +105,7 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
-  transition: var(--transition-border-color);
+  @include transitions(border-color);
 
   &::placeholder {
     font-size: 12px;
@@ -148,7 +148,7 @@
   height: 15px;
   border-radius: 2px;
   border: 2px solid rgba(33, 33, 33, 1);
-  transition: var(--transition-border-color);
+  @include transitions(border-color);
 
   .checkbox__check:focus + .checkbox__text > & {
     border-color: var(--accent-color);
@@ -170,7 +170,7 @@
 
 /* ---------------------*/
 .modal__submit-btn {
-  transition: var(--transition-background-color);
+  @include transitions(background-color);
 
   margin: 0 auto;
 

@@ -20,7 +20,7 @@
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  transition: var(--transition-color);
+  @include transitions(color);
   &:visited {
     color: rgba(117, 117, 117, 1);
   }

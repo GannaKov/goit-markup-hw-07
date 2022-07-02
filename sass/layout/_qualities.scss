@@ -1,15 +1,11 @@
-/*.qualities-item:not(:last-child) {
-  margin-right: 30px;
-}*/
+
 .qualities-list {
   display: flex;
-  /*margin: -15px;*/
+  
   column-gap: 30px;
 
   &__item {
-    /*outline: 1px dashed green;*/
-    /*width: calc((100% - 4 * 30px) / 4);
-  margin: 15px;*/
+   
     flex-basis: calc((100% - 3 * 30px) / 4);
   }
   &__icon {
@@ -20,7 +16,7 @@
     background-color: rgba(245, 244, 250, 1);
     border-radius: 4px;
     justify-content: center;
-    /*padding: 25px 100px;*/
+    
     align-items: center;
   }
 
