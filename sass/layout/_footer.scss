@@ -61,7 +61,7 @@
   /* outline: 1px solid green;*/
 }
 
-.block-join__title {
+.footer-block__title {
   margin-bottom: 20px;
   color: rgba(255, 255, 255, 1);
 
@@ -71,13 +71,10 @@
 
   text-transform: uppercase;
 }
+
 /* mailing block*/
-.footer-block-mailing {
-  /*outline: 1px solid green;*/
-  /* width: 570px;*/
-  /*height: 86px;*/
-}
-.footer-mailing-text {
+
+.footer-mailing__text {
   margin-bottom: 20px;
   font-weight: 700;
 
@@ -86,40 +83,46 @@
   text-transform: uppercase;
   color: var(--btn-text);
 }
-.footer-mailing-field {
+.footer-mailing__field {
   display: flex;
 }
 
-.footer-mailing-imput {
+.footer-mailing__imput {
   padding-left: 16px;
   margin-right: 12px;
   width: 358px;
   height: 50px;
-  background-color: transparent;
-  font-size: 16px;
+
   line-height: 1.25;
+  font-size: 16px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+
+  background-color: transparent;
   color: rgba(255, 255, 255, 0.6);
   outline: transparent;
+
   transition: var(--transition-border-color);
-}
-.footer-mailing-imput:focus {
-  color: rgba(255, 255, 255, 1);
 
-  border-color: rgba(255, 255, 255, 1);
-}
-.footer-mailing-imput::placeholder {
-  font-size: 16px;
-  line-height: 1.25;
+  &:focus {
+    color: rgba(255, 255, 255, 1);
 
-  color: rgba(255, 255, 255, 0.6);
+    border-color: rgba(255, 255, 255, 1);
+  }
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
-.footer-mailing-btn {
+
+.footer-mailing__btn {
   outline: 1px solid transparent;
 }
-.icon-send {
+.footer-mailing__icon {
   margin-left: 10px;
 }
